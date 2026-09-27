@@ -1,7 +1,5 @@
 # Reprise — research papers, reborn
 
-**Live demo:** https://merahulahire.github.io/responsive-layout-research-paper/
-
 ![Desktop, light theme](docs/screenshots/desktop-light.png)
 
 | Citation peek on mobile | Benchmarks as charts (dark) |
@@ -18,6 +16,8 @@ npm install
 npm run dev        # compiles content → public/papers/*/ then starts Vite
 npm run build      # same, then a production build in dist/
 ```
+
+**Deploying (e.g. Cloudflare Pages):** build command `npm run build`, output directory `dist`.
 
 ## How it's put together
 

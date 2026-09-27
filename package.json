@@ -9,7 +9,6 @@
     "type": "git",
     "url": "https://github.com/MeRahulAhire/responsive-layout-research-paper.git"
   },
-  "homepage": "https://merahulahire.github.io/responsive-layout-research-paper/",
   "type": "module",
   "engines": {
     "node": ">=20"
