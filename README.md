@@ -1,5 +1,7 @@
 # Reprise — research papers, reborn
 
+**Live demo:** https://responsive-layout-research-paper.rahulahire.workers.dev/
+
 ![Desktop, light theme](docs/screenshots/desktop-light.png)
 
 | Citation peek on mobile | Benchmarks as charts (dark) |
