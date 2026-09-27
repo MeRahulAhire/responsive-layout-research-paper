@@ -1,0 +1,135 @@
+/* ── Design tokens ─────────────────────────────────────────────────────────
+   Warm "paper & ink" palette. Chart series slots were validated for
+   lightness band, chroma, CVD separation, normal-vision ΔE and 3:1 contrast
+   against each theme's surface (dataviz validator, light + dark).            */
+
+:root {
+  color-scheme: light;
+
+  --bg: #fbfaf7;
+  --bg-elev: #ffffff;
+  --surface: #f5f3ee;
+  --surface-2: #efece5;
+  --plate: #ffffff;
+
+  --ink: #1b1a17;
+  --ink-2: #3d3b36;
+  --muted: #6c685f;
+  --faint: #9d988d;
+
+  --rule: #e8e4db;
+  --rule-strong: #d7d1c4;
+
+  --accent: #c4502a;
+  --accent-ink: #a8421f;
+  --accent-soft: rgb(196 80 42 / 0.09);
+  --accent-softer: rgb(196 80 42 / 0.05);
+  --accent-line: rgb(196 80 42 / 0.35);
+
+  --blue-ink: #2f6db0;
+  --ok: #3f7d4a;
+
+  --series-1: #c4502a; /* terracotta — FlashAttention / this paper */
+  --series-2: #2f6db0; /* slate blue */
+  --series-3: #0e9a80; /* teal */
+  --series-4: #b98100; /* ochre */
+  --series-5: #9a4e9c; /* plum */
+  --series-6: #5e8a2e; /* olive */
+
+  --shadow-sm: 0 1px 2px rgb(27 26 23 / 0.06);
+  --shadow-card: 0 1px 0 rgb(27 26 23 / 0.03), 0 2px 6px rgb(27 26 23 / 0.04), 0 18px 40px -18px rgb(27 26 23 / 0.22);
+  --shadow-pop: 0 1px 0 rgb(27 26 23 / 0.04), 0 8px 20px -6px rgb(27 26 23 / 0.12), 0 28px 60px -20px rgb(27 26 23 / 0.28);
+
+  --f-display: "Instrument Serif", "Iowan Old Style", Georgia, serif;
+  --f-serif: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --f-sans: "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono: "Geist Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  --r-sm: 8px;
+  --r-md: 12px;
+  --r-lg: 18px;
+
+  --measure: 700px;
+  --rail: 248px;
+  --margin-col: 260px;
+  --gap: 56px;
+  --topbar: 58px;
+
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #141311;
+    --bg-elev: #1c1b18;
+    --surface: #1a1917;
+    --surface-2: #24221f;
+    --plate: #ecE9e2;
+
+    --ink: #eeeae2;
+    --ink-2: #cfc9bd;
+    --muted: #9c978c;
+    --faint: #6f6b63;
+
+    --rule: #2a2825;
+    --rule-strong: #3a3732;
+
+    --accent: #e0764a;
+    --accent-ink: #ef8f64;
+    --accent-soft: rgb(224 118 74 / 0.13);
+    --accent-softer: rgb(224 118 74 / 0.07);
+    --accent-line: rgb(224 118 74 / 0.4);
+
+    --blue-ink: #7fb0ea;
+    --ok: #7fbf8a;
+
+    --series-1: #d9642f;
+    --series-2: #5b93d6;
+    --series-3: #149c82;
+    --series-4: #c08a10;
+    --series-5: #b97ac0;
+    --series-6: #6e9c36;
+
+    --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.4);
+    --shadow-card: 0 1px 0 rgb(255 255 255 / 0.03) inset, 0 18px 40px -18px rgb(0 0 0 / 0.7);
+    --shadow-pop: 0 1px 0 rgb(255 255 255 / 0.04) inset, 0 28px 60px -18px rgb(0 0 0 / 0.75);
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #141311;
+  --bg-elev: #1c1b18;
+  --surface: #1a1917;
+  --surface-2: #24221f;
+  --plate: #ece9e2;
+
+  --ink: #eeeae2;
+  --ink-2: #cfc9bd;
+  --muted: #9c978c;
+  --faint: #6f6b63;
+
+  --rule: #2a2825;
+  --rule-strong: #3a3732;
+
+  --accent: #e0764a;
+  --accent-ink: #ef8f64;
+  --accent-soft: rgb(224 118 74 / 0.13);
+  --accent-softer: rgb(224 118 74 / 0.07);
+  --accent-line: rgb(224 118 74 / 0.4);
+
+  --blue-ink: #7fb0ea;
+  --ok: #7fbf8a;
+
+  --series-1: #d9642f;
+  --series-2: #5b93d6;
+  --series-3: #149c82;
+  --series-4: #c08a10;
+  --series-5: #b97ac0;
+  --series-6: #6e9c36;
+
+  --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.4);
+  --shadow-card: 0 1px 0 rgb(255 255 255 / 0.03) inset, 0 18px 40px -18px rgb(0 0 0 / 0.7);
+  --shadow-pop: 0 1px 0 rgb(255 255 255 / 0.04) inset, 0 28px 60px -18px rgb(0 0 0 / 0.75);
+}

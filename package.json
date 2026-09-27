@@ -1,0 +1,34 @@
+{
+  "name": "responsive-layout-research-paper",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Converts the FlashAttention paper from PDF into a responsive, interactive HTML reader (React + Vite) with KaTeX math, citation peek cards, and table-to-chart toggles.",
+  "author": "Rahul Ahire",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MeRahulAhire/responsive-layout-research-paper.git"
+  },
+  "homepage": "https://merahulahire.github.io/responsive-layout-research-paper/",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build:paper": "node scripts/build-paper.mjs",
+    "dev": "npm run build:paper && vite",
+    "build": "npm run build:paper && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@floating-ui/react": "^0.27.20",
+    "echarts": "^6.1.0",
+    "katex": "^0.18.9",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.1.1",
+    "vite": "^8.3.1"
+  }
+}
